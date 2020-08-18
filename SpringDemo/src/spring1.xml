@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		 http://www.springframework.org/schema/context
+		 http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+		 http://www.springframework.org/schema/tx 
+		 http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		 http://www.springframework.org/schema/aop 
+		 http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		 http://www.springframework.org/schema/mvc
+		 http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+<bean id = "square" class="com.cg.demo.bean.Square">
+	<property name = "points">
+		<list>
+			<ref bean="p1"></ref>
+			<ref bean="p2"></ref>
+			<ref bean="p3"></ref>
+			<ref bean="p4"></ref>
+		</list>
+	</property>
+</bean>
+
+<bean id="p1" class="com.cg.demo.bean.Point">
+	<constructor-arg value="100"></constructor-arg>
+	<constructor-arg value="200"></constructor-arg>
+</bean>
+
+<bean id="p2" class="com.cg.demo.bean.Point">
+	<constructor-arg value="300"></constructor-arg>
+	<constructor-arg value="400"></constructor-arg>
+</bean>
+
+<bean id="p3" class="com.cg.demo.bean.Point">
+	<constructor-arg value="500"></constructor-arg>
+	<constructor-arg value="600"></constructor-arg>
+</bean>
+
+<bean id="p4" class="com.cg.demo.bean.Point">
+	<constructor-arg value="700"></constructor-arg>
+	<constructor-arg value="800"></constructor-arg>
+</bean>
+
+ 
+
+</beans>
